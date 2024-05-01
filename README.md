@@ -1,8 +1,8 @@
 # My approach for solving the problem
-## Optimizing graphics
+## Optimizing GPU
 ### For Marbles
-GPU draw calls were at first exceeding 1000, which increases CPU bottleneck.
-So I managed to make the Marbles prefab static, and enabled GPU instancing for its materials to achieve static batching which makes draw calls nearly 40.
+GPU draw calls were at first exceeding 10000 batches, which increases CPU bottleneck.
+So I managed to make the Marbles prefab static, and enabled GPU instancing for its materials to achieve static batching which makes draw calls nearly 40 batches.
 ### For Actors
 This was a hassle to be honest, as I got rid of the Actors prefab and instead, I used GPU instancing for making them, and managed to update their hunt/search behaviors by a manager script.
 ## Optimizing CPU
